@@ -1,0 +1,59 @@
+DevOps
+
+
+Basically DevOps Engineer is nothing but its a mediater between the developer team and the operation team.
+
+Like it was brought to reduce the communication gap between the two grups.
+
+Because of it the road blocks that are there during the devlopment are reduced.
+
+The devops engineer should have basic knowledge of all the tools.
+
+In DevOps one need to be more generalistic than a specalist
+
+As there are too many tools one should have that understanding to select particular tool
+
+You need to understand Connection between the tools
+
+You are the Architect, need to have understanding how the it efficts on other tools
+
+As in devops we deal with different tools we need to have good communication skills to make understand our idea.
+
+
+DevOps Lifecycle
+
+Plan
+Develop
+Test
+Deploy
+Operate
+Monitor
+
+
+Benefits of DevOps
+
+1. Faster Time to Market
+2. Improved Collaboration
+3. Enhanced Quality and Reliability
+4. Greater Efficiency and Productivity
+
+
+Tools to learn Devops
+
+1. Version Control: Git, Github
+
+2. Continuous Integration (CI)/(CD): Jenkins
+
+3. Configuration Management: Anisble
+
+4. Containerization and Orchestration: Docker, Kubernetes
+
+5. Cloud Platforms:AWS
+
+6. Scripting Language: Python
+
+7. Networking and security
+
+8. OS: Linux
+
+ 

@@ -1,0 +1,101 @@
+Version Control
+
+The Reason why virsion control was bought into use was like when u are working on particular code in group
+there will be daily changes in your code so before it was happening manually like copying from one system to
+another but this could bring Lot of problem so to solve this we use Git as version control.
+
+ Here it keeps the record of your changes
+
+ Allows for Collaborative development
+
+ Allows you to know who made what changes and when
+
+ Allows you to revert any changes
+-------------------------------------------------------
+
+Basic concepts in Git
+
+Repository: A directory where Git stores all project files and metadata.
+
+Commit: A snapshot of changes at a particular point in time.
+
+Branch: A parallel version of the repository for isolated development or experimentation.
+
+Merge: Combining changes from one branch into another.
+-------------------------------------------------------
+
+Git WorkFlow
+
+Clone: Copy the repository to your local machine.
+
+Add: Stage changes for the next commit.
+
+Commit: Save changes to the repository.
+
+Push: Upload local changes to the remote repository.
+---------------------------------------
+Version Control System types
+
+1. Local 
+2. Centralized
+3. distributed
+
+------------------------------------------------------
+
+Some basic points to know before starting with Git 
+
+1. All git commands start with "git"
+2. You should introduce yourself to git
+3. git works with Repository
+4. most of the git command should run inside the repository
+
+-------------------------------------------------------
+
+
+There are two types of areas 
+1. Working Area                                                                        working --> staging --> Local repository
+2. Staging Area
+
+--------------------------------------------------------
+
+If you want to make git repository for your application
+Go to repo --> open GtiBash --> git init.
+After executing this command you can see that a .git repo is create at that palce 
+
+To check the hidden files in the directory we us command ls -a
+
+To create a file and add somethong into it we use cat> command
+with the above command cat "fileName" we can also read the data.
+
+
+when you only create a file and some text or code into it it's in the working are you need to add it to the 
+staging area by giving the command git add./git add "file name", the files that are in working area are known as
+untracked file and the files that are in reposiory are know as tracked file 
+
+To find the difference between the file in working area and the same updated file in the staging area we use the command
+git diff, it also provide what one has changed if a line is inserted it will be in the green colour and if removed it will be in the red colour
+
+git diff-> this is the command that compares the changes between working directory with staging directory
+git diff --staged -> this is the command we use for comparing changes between Staging area and Repository
+git ditt HEAD -> is the command we  use to working directory to local repository
+
+To copy a repository from the github we use (git clone "url of gitbub") command.-
+
+--------------------------------------------------------------
+
+some basic Commands
+
+git init . -> its the command used to make a git repository
+pwd -> to check your location
+cat> this command is used to add some thing into your file
+ls -> used to see list of files in the working directory
+git add -> the command git add "file_name/if_extention_with_That"
+git status -> very useful command to check if the repo has tracked or untracked files
+git log -> it is the command that tells You what are the commits that you have done in repo
+git touch -> to create  multiple files in the git we use this command git touch "file_name1" "file_name2"
+git config --global user.name"name"
+git config --global user.email"eamil@"
+clear -> by using this command you can clear your screen
+git diff -> with this command we can find out the difference between the file in working space and the same file in the staging area
+cd -> to change the directory
+mkdir -> to create the repository
