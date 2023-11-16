@@ -1,0 +1,1149 @@
+--[ec2-user@ip-172-31-17-119 ~]$ sudo yum update -y
+
+
+Last metadata expiration check: 0:08:02 ago on Wed Nov 15 11:29:05 2023.
+Dependencies resolved.
+Nothing to do.
+Complete!
+--[ec2-user@ip-172-31-17-119 ~]$ sudo yum install docker -y
+
+
+Last metadata expiration check: 0:08:38 ago on Wed Nov 15 11:29:05 2023.
+Dependencies resolved.
+=================================================================================================================================================
+ Package                                  Architecture             Version                                   Repository                     Size
+=================================================================================================================================================
+Installing:
+ docker                                   x86_64                   24.0.5-1.amzn2023.0.2                     amazonlinux                    42 M
+Installing dependencies:
+ containerd                               x86_64                   1.7.2-1.amzn2023.0.4                      amazonlinux                    34 M
+ iptables-libs                            x86_64                   1.8.8-3.amzn2023.0.2                      amazonlinux                   401 k
+ iptables-nft                             x86_64                   1.8.8-3.amzn2023.0.2                      amazonlinux                   183 k
+ libcgroup                                x86_64                   3.0-1.amzn2023.0.1                        amazonlinux                    75 k
+ libnetfilter_conntrack                   x86_64                   1.0.8-2.amzn2023.0.2                      amazonlinux                    58 k
+ libnfnetlink                             x86_64                   1.0.1-19.amzn2023.0.2                     amazonlinux                    30 k
+ libnftnl                                 x86_64                   1.2.2-2.amzn2023.0.2                      amazonlinux                    84 k
+ pigz                                     x86_64                   2.5-1.amzn2023.0.3                        amazonlinux                    83 k
+ runc                                     x86_64                   1.1.7-1.amzn2023.0.3                      amazonlinux                   3.0 M
+
+Transaction Summary
+=================================================================================================================================================
+Install  10 Packages
+
+Total download size: 80 M
+Installed size: 306 M
+Downloading Packages:
+(1/10): libnetfilter_conntrack-1.0.8-2.amzn2023.0.2.x86_64.rpm                                                   652 kB/s |  58 kB     00:00    
+(2/10): libcgroup-3.0-1.amzn2023.0.1.x86_64.rpm                                                                  598 kB/s |  75 kB     00:00    
+(3/10): iptables-libs-1.8.8-3.amzn2023.0.2.x86_64.rpm                                                            4.5 MB/s | 401 kB     00:00    
+(4/10): libnfnetlink-1.0.1-19.amzn2023.0.2.x86_64.rpm                                                            2.2 MB/s |  30 kB     00:00    
+(5/10): runc-1.1.7-1.amzn2023.0.3.x86_64.rpm                                                                      11 MB/s | 3.0 MB     00:00    
+(6/10): libnftnl-1.2.2-2.amzn2023.0.2.x86_64.rpm                                                                 1.0 MB/s |  84 kB     00:00    
+(7/10): iptables-nft-1.8.8-3.amzn2023.0.2.x86_64.rpm                                                             2.0 MB/s | 183 kB     00:00    
+(8/10): pigz-2.5-1.amzn2023.0.3.x86_64.rpm                                                                       1.1 MB/s |  83 kB     00:00    
+(9/10): docker-24.0.5-1.amzn2023.0.2.x86_64.rpm                                                                   60 MB/s |  42 MB     00:00    
+(10/10): containerd-1.7.2-1.amzn2023.0.4.x86_64.rpm                                                               46 MB/s |  34 MB     00:00    
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                             72 MB/s |  80 MB     00:01     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                         1/1 
+  Installing       : runc-1.1.7-1.amzn2023.0.3.x86_64                                                                                       1/10 
+  Installing       : containerd-1.7.2-1.amzn2023.0.4.x86_64                                                                                 2/10 
+  Running scriptlet: containerd-1.7.2-1.amzn2023.0.4.x86_64                                                                                 2/10 
+  Installing       : pigz-2.5-1.amzn2023.0.3.x86_64                                                                                         3/10 
+  Installing       : libnftnl-1.2.2-2.amzn2023.0.2.x86_64                                                                                   4/10 
+  Installing       : libnfnetlink-1.0.1-19.amzn2023.0.2.x86_64                                                                              5/10 
+  Installing       : libnetfilter_conntrack-1.0.8-2.amzn2023.0.2.x86_64                                                                     6/10 
+  Installing       : iptables-libs-1.8.8-3.amzn2023.0.2.x86_64                                                                              7/10 
+  Installing       : iptables-nft-1.8.8-3.amzn2023.0.2.x86_64                                                                               8/10 
+  Running scriptlet: iptables-nft-1.8.8-3.amzn2023.0.2.x86_64                                                                               8/10 
+  Installing       : libcgroup-3.0-1.amzn2023.0.1.x86_64                                                                                    9/10 
+  Running scriptlet: docker-24.0.5-1.amzn2023.0.2.x86_64                                                                                   10/10 
+  Installing       : docker-24.0.5-1.amzn2023.0.2.x86_64                                                                                   10/10 
+  Running scriptlet: docker-24.0.5-1.amzn2023.0.2.x86_64                                                                                   10/10 
+Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /usr/lib/systemd/system/docker.socket.
+
+  Verifying        : runc-1.1.7-1.amzn2023.0.3.x86_64                                                                                       1/10 
+  Verifying        : libnetfilter_conntrack-1.0.8-2.amzn2023.0.2.x86_64                                                                     2/10 
+  Verifying        : libcgroup-3.0-1.amzn2023.0.1.x86_64                                                                                    3/10 
+  Verifying        : docker-24.0.5-1.amzn2023.0.2.x86_64                                                                                    4/10 
+  Verifying        : iptables-libs-1.8.8-3.amzn2023.0.2.x86_64                                                                              5/10 
+  Verifying        : libnfnetlink-1.0.1-19.amzn2023.0.2.x86_64                                                                              6/10 
+  Verifying        : libnftnl-1.2.2-2.amzn2023.0.2.x86_64                                                                                   7/10 
+  Verifying        : iptables-nft-1.8.8-3.amzn2023.0.2.x86_64                                                                               8/10 
+  Verifying        : containerd-1.7.2-1.amzn2023.0.4.x86_64                                                                                 9/10 
+  Verifying        : pigz-2.5-1.amzn2023.0.3.x86_64                                                                                        10/10 
+
+Installed:
+  containerd-1.7.2-1.amzn2023.0.4.x86_64        docker-24.0.5-1.amzn2023.0.2.x86_64      iptables-libs-1.8.8-3.amzn2023.0.2.x86_64             
+  iptables-nft-1.8.8-3.amzn2023.0.2.x86_64      libcgroup-3.0-1.amzn2023.0.1.x86_64      libnetfilter_conntrack-1.0.8-2.amzn2023.0.2.x86_64    
+  libnfnetlink-1.0.1-19.amzn2023.0.2.x86_64     libnftnl-1.2.2-2.amzn2023.0.2.x86_64     pigz-2.5-1.amzn2023.0.3.x86_64                        
+  runc-1.1.7-1.amzn2023.0.3.x86_64             
+
+Complete!
+--[ec2-user@ip-172-31-17-119 ~]$ sudo service docker start
+Redirecting to /bin/systemctl start docker.service
+--[ec2-user@ip-172-31-17-119 ~]$ sudo usermod -a -G docker ec2-user
+--[ec2-user@ip-172-31-17-119 ~]$ grep docker /etc/group
+docker:x:992:ec2-user
+--[ec2-user@ip-172-31-17-119 ~]$ newgrp docker
+
+
+--[ec2-user@ip-172-31-17-119 ~]$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+--[ec2-user@ip-172-31-17-119 ~]$ docker pull nginx
+Using default tag: latest
+latest: Pulling from library/nginx
+578acb154839: Pull complete 
+e398db710407: Pull complete 
+85c41ebe6d66: Pull complete 
+7170a263b582: Pull complete 
+8f28d06e2e2e: Pull complete 
+6f837de2f887: Pull complete 
+c1dfc7e1671e: Pull complete                                                Digest: sha256:86e53c4c16a6a276b204b0fd3a8143d86547c967dc8258b3d47c3a21bb68d3c6
+Status: Downloaded newer image for nginx:latest
+docker.io/library/nginx:latest
+--[ec2-user@ip-172-31-17-119 ~]$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+--[ec2-user@ip-172-31-17-119 ~]$ docker image ls
+REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+nginx        latest    c20060033e06   2 weeks ago   187MB
+--[ec2-user@ip-172-31-17-119 ~]$ docker image ls --no-trunc
+REPOSITORY   TAG       IMAGE ID                                                                  CREATED       SIZE
+nginx        latest    sha256:c20060033e06f882b0fbe2db7d974d72e0887a3be5e554efdb0dcf8d53512647   2 weeks ago   187MB
+--[ec2-user@ip-172-31-17-119 ~]$ docker run -d --name nginx-server nginx
+7952f1c09c66f077c54f8943e033fcf4613055f82cf5febbb15ba5e8ed49c2cf
+--[ec2-user@ip-172-31-17-119 ~]$ docker ps
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS     NAMES
+7952f1c09c66   nginx     "/docker-entrypoint.…"   14 seconds ago   Up 14 seconds   80/tcp    nginx-server
+--[ec2-user@ip-172-31-17-119 ~]$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS     NAMES
+7952f1c09c66   nginx     "/docker-entrypoint.…"   20 seconds ago   Up 19 seconds   80/tcp    nginx-server
+--[ec2-user@ip-172-31-17-119 ~]$ docker ps --no-trunc
+CONTAINER ID                                                       IMAGE     COMMAND                                          CREATED         STATUS         PORTS     NAMES
+7952f1c09c66f077c54f8943e033fcf4613055f82cf5febbb15ba5e8ed49c2cf   nginx     "/docker-entrypoint.sh nginx -g 'daemon off;'"   5 minutes ago   Up 5 minutes   80/tcp    nginx-server
+--[ec2-user@ip-172-31-17-119 ~]$ docker history c2006
+IMAGE          CREATED       CREATED BY                                      SIZE      COMMENT
+c20060033e06   2 weeks ago   /bin/sh -c #(nop)  CMD ["nginx" "-g" "daemon…   0B        
+<missing>      2 weeks ago   /bin/sh -c #(nop)  STOPSIGNAL SIGQUIT           0B        
+<missing>      2 weeks ago   /bin/sh -c #(nop)  EXPOSE 80                    0B        
+<missing>      2 weeks ago   /bin/sh -c #(nop)  ENTRYPOINT ["/docker-entr…   0B        
+<missing>      2 weeks ago   /bin/sh -c #(nop) COPY file:9e3b2b63db9f8fc7…   4.62kB    
+<missing>      2 weeks ago   /bin/sh -c #(nop) COPY file:57846632accc8975…   3.02kB    
+<missing>      2 weeks ago   /bin/sh -c #(nop) COPY file:3b1b9915b7dd898a…   298B      
+<missing>      2 weeks ago   /bin/sh -c #(nop) COPY file:caec368f5a54f70a…   2.12kB    
+<missing>      2 weeks ago   /bin/sh -c #(nop) COPY file:01e75c6dd0ce317d…   1.62kB    
+<missing>      2 weeks ago   /bin/sh -c set -x     && groupadd --system -…   112MB     
+<missing>      2 weeks ago   /bin/sh -c #(nop)  ENV PKG_RELEASE=1~bookworm   0B        
+<missing>      2 weeks ago   /bin/sh -c #(nop)  ENV NJS_VERSION=0.8.2        0B        
+<missing>      2 weeks ago   /bin/sh -c #(nop)  ENV NGINX_VERSION=1.25.3     0B        
+<missing>      2 weeks ago   /bin/sh -c #(nop)  LABEL maintainer=NGINX Do…   0B        
+<missing>      2 weeks ago   /bin/sh -c #(nop)  CMD ["bash"]                 0B        
+<missing>      2 weeks ago   /bin/sh -c #(nop) ADD file:fbd8521c24ed75802…   74.8MB    
+--[ec2-user@ip-172-31-17-119 ~]$ docker pull tomcat:7.0
+7.0: Pulling from library/tomcat
+0bc3020d05f1: Pull complete 
+a110e5871660: Pull complete 
+83d3c0fa203a: Pull complete 
+a8fd09c11b02: Pull complete 
+96ebf1506065: Pull complete 
+26b72ffca293: Pull complete 
+0bffa2ea17aa: Pull complete 
+d880cebcc7a6: Pull complete 
+d19ab8039b36: Pull complete 
+5057492dc495: Pull complete                                                 Digest: sha256:f7d37d248d0eacec1e5995736234c9c22155626fcb27ea3ead13b9db24e698f7
+Status: Downloaded newer image for tomcat:7.0
+docker.io/library/tomcat:7.0
+
+
+
+
+--[ec2-user@ip-172-31-17-119 ~]$ docker run -d --name tomcat-server1 tomcat:7.0
+167f18cb3982bbf1ed6887b607a52ceb3cce32a8e1dda6601f74f401590e60ef
+--[ec2-user@ip-172-31-17-119 ~]$ docker inspect ecf05
+[]
+Error: No such object: ecf05
+--[ec2-user@ip-172-31-17-119 ~]$ docker inspect 167f1
+[
+    {
+        "Id": "167f18cb3982bbf1ed6887b607a52ceb3cce32a8e1dda6601f74f401590e60ef",
+        "Created": "2023-11-15T13:52:02.101853456Z",
+        "Path": "catalina.sh",
+        "Args": [
+            "run"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 30913,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2023-11-15T13:52:02.653722408Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:9dfd74e6bc2f5a477649be71bec187dce1c04cccecaca286d5e6604e9f8d2afc",
+        "ResolvConfPath": "/var/lib/docker/containers/167f18cb3982bbf1ed6887b607a52ceb3cce32a8e1dda6601f74f401590e60ef/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/167f18cb3982bbf1ed6887b607a52ceb3cce32a8e1dda6601f74f401590e60ef/hostname",
+        "HostsPath": "/var/lib/docker/containers/167f18cb3982bbf1ed6887b607a52ceb3cce32a8e1dda6601f74f401590e60ef/hosts",
+        "LogPath": "/var/lib/docker/containers/167f18cb3982bbf1ed6887b607a52ceb3cce32a8e1dda6601f74f401590e60ef/167f18cb3982bbf1ed6887b607a52ceb3cce32a8e1dda6601f74f401590e60ef-json.log",
+        "Name": "/tomcat-server1",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "default",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                20,
+                146
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": [
+                {
+                    "Name": "nofile",
+                    "Hard": 65536,
+                    "Soft": 32768
+                }
+            ],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/c083d70f03da2ccb571a19804bf86169e78d4edd467ab07ec3a4daca9207c0ea-init/diff:/var/lib/docker/overlay2/33895d2a2e28e4ad05deece8a4deade5f451f99730c1d92bdb6eca91cddba12c/diff:/var/lib/docker/overlay2/1fba628fc0df01740383f1b262a121d80146fe6a9e093def3cfc36db22a31119/diff:/var/lib/docker/overlay2/928d070a73e4d7634dbff2612012a8414d22c277030f48eacca7c637974e73c3/diff:/var/lib/docker/overlay2/3a1185ef645bbfbf56f7bb9e33374e99ac61a42c302d013de57c9b775259a9bc/diff:/var/lib/docker/overlay2/1600826c7e7a1db41b178a82bf8bab5dd5889c45cfdaab61938cd732ef3b776a/diff:/var/lib/docker/overlay2/cde1992ee7d7b54304b080d776a6e73d0834a7b4e4463d542f1824c610a5b22b/diff:/var/lib/docker/overlay2/4e3e57df8d7432f8e470acc2fd30734f1087776c48ec5058b3cae61ba59c3eea/diff:/var/lib/docker/overlay2/69b89003583bc6eea48932cddbb073eaebe6cc96b31948224237a3f6d6cab5a8/diff:/var/lib/docker/overlay2/22f61657d653df2954cd3a33ee281d11e9e0791cfdbe4de3ef01ea6e49fa66c0/diff:/var/lib/docker/overlay2/ed4c3f4cd37105250fe5cf5582774e1fdb4b80a2a2851f3d9bc1142b6c1041fb/diff",
+                "MergedDir": "/var/lib/docker/overlay2/c083d70f03da2ccb571a19804bf86169e78d4edd467ab07ec3a4daca9207c0ea/merged",
+                "UpperDir": "/var/lib/docker/overlay2/c083d70f03da2ccb571a19804bf86169e78d4edd467ab07ec3a4daca9207c0ea/diff",
+                "WorkDir": "/var/lib/docker/overlay2/c083d70f03da2ccb571a19804bf86169e78d4edd467ab07ec3a4daca9207c0ea/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "167f18cb3982",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "8080/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/tomcat/bin:/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "JAVA_HOME=/usr/local/openjdk-8",
+                "LANG=C.UTF-8",
+                "JAVA_VERSION=8u292",
+                "CATALINA_HOME=/usr/local/tomcat",
+                "TOMCAT_NATIVE_LIBDIR=/usr/local/tomcat/native-jni-lib",
+                "LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib",
+                "GPG_KEYS=05AB33110949707C93A279E3D3EFE6B686867BA6 07E48665A34DCAFAE522E5E6266191C37C037D42 47309207D818FFD8DCD3F83F1931D684307A10A5 541FBE7D8F78B25E055DDEE13C370389288584E7 61B832AC2F1C5A90F0F9B00A1C506407564C17A3 713DA88BE50911535FE716F5208B0AB1D63011C7 79F7026C690BAA50B92CD8B66A3AD3F4F22C4FED 9BA44C2621385CB966EBA586F72C284D731FABEE A27677289986DB50844682F8ACB77FC2E86E29AC A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243 F3A04C595DB5B6A5F1ECA43E3B7BBB100D811BBE F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23",
+                "TOMCAT_MAJOR=7",
+                "TOMCAT_VERSION=7.0.109",
+                "TOMCAT_SHA512=612e830913bf1401bc9540e2273e465b0ee7ef63750a9969a80f1e9da9edb4888aa621fcc6fa5ba23cff94a40e91eb97e3f969b8064dabd49b2d0ea29e59b57e"
+            ],
+            "Cmd": [
+                "catalina.sh",
+                "run"
+            ],
+            "Image": "tomcat:7.0",
+            "Volumes": null,
+            "WorkingDir": "/usr/local/tomcat",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {}
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "72d3c153883a5382c8208403696c143e23ea8cf15609776e9ec569145d4f79dc",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "8080/tcp": null
+            },
+            "SandboxKey": "/var/run/docker/netns/72d3c153883a",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "a06f0761f2554520953255560756a24390f0149484f6c78d2ad95c8b43b34e19",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.3",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "02:42:ac:11:00:03",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "NetworkID": "50f3c1020ceacc4b1b48682228bd4f4135a869ea03172e9fc0af78e778605448",
+                    "EndpointID": "a06f0761f2554520953255560756a24390f0149484f6c78d2ad95c8b43b34e19",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.3",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:11:00:03",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]
+--[ec2-user@ip-172-31-17-119 ~]$ docker image ls
+REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+nginx        latest    c20060033e06   2 weeks ago   187MB
+tomcat       7.0       9dfd74e6bc2f   2 years ago   533MB
+--[ec2-user@ip-172-31-17-119 ~]$ docker inspect 9dfd7
+[
+    {
+        "Id": "sha256:9dfd74e6bc2f5a477649be71bec187dce1c04cccecaca286d5e6604e9f8d2afc",
+        "RepoTags": [
+            "tomcat:7.0"
+        ],
+        "RepoDigests": [
+            "tomcat@sha256:f7d37d248d0eacec1e5995736234c9c22155626fcb27ea3ead13b9db24e698f7"
+        ],
+        "Parent": "",
+        "Comment": "",
+        "Created": "2021-07-02T20:16:14.754095752Z",
+        "Container": "fcf4483c501538de81825b7c30cd25dc804d2ceaaab7b27cc91cb3f11c2d6ef8",
+        "ContainerConfig": {
+            "Hostname": "fcf4483c5015",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "8080/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/tomcat/bin:/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "JAVA_HOME=/usr/local/openjdk-8",
+                "LANG=C.UTF-8",
+                "JAVA_VERSION=8u292",
+                "CATALINA_HOME=/usr/local/tomcat",
+                "TOMCAT_NATIVE_LIBDIR=/usr/local/tomcat/native-jni-lib",
+                "LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib",
+                "GPG_KEYS=05AB33110949707C93A279E3D3EFE6B686867BA6 07E48665A34DCAFAE522E5E6266191C37C037D42 47309207D818FFD8DCD3F83F1931D684307A10A5 541FBE7D8F78B25E055DDEE13C370389288584E7 61B832AC2F1C5A90F0F9B00A1C506407564C17A3 713DA88BE50911535FE716F5208B0AB1D63011C7 79F7026C690BAA50B92CD8B66A3AD3F4F22C4FED 9BA44C2621385CB966EBA586F72C284D731FABEE A27677289986DB50844682F8ACB77FC2E86E29AC A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243 F3A04C595DB5B6A5F1ECA43E3B7BBB100D811BBE F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23",
+                "TOMCAT_MAJOR=7",
+                "TOMCAT_VERSION=7.0.109",
+                "TOMCAT_SHA512=612e830913bf1401bc9540e2273e465b0ee7ef63750a9969a80f1e9da9edb4888aa621fcc6fa5ba23cff94a40e91eb97e3f969b8064dabd49b2d0ea29e59b57e"
+            ],
+            "Cmd": [
+                "/bin/sh",
+                "-c",
+                "#(nop) ",
+                "CMD [\"catalina.sh\" \"run\"]"
+            ],
+            "Image": "sha256:f3e4268a01e52ebafdbdcd735ecbc05cfaf7f9ab4161db4adf93d531fe5812d1",
+            "Volumes": null,
+            "WorkingDir": "/usr/local/tomcat",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {}
+        },
+        "DockerVersion": "20.10.7",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "8080/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/tomcat/bin:/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "JAVA_HOME=/usr/local/openjdk-8",
+                "LANG=C.UTF-8",
+                "JAVA_VERSION=8u292",
+                "CATALINA_HOME=/usr/local/tomcat",
+                "TOMCAT_NATIVE_LIBDIR=/usr/local/tomcat/native-jni-lib",
+                "LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib",
+                "GPG_KEYS=05AB33110949707C93A279E3D3EFE6B686867BA6 07E48665A34DCAFAE522E5E6266191C37C037D42 47309207D818FFD8DCD3F83F1931D684307A10A5 541FBE7D8F78B25E055DDEE13C370389288584E7 61B832AC2F1C5A90F0F9B00A1C506407564C17A3 713DA88BE50911535FE716F5208B0AB1D63011C7 79F7026C690BAA50B92CD8B66A3AD3F4F22C4FED 9BA44C2621385CB966EBA586F72C284D731FABEE A27677289986DB50844682F8ACB77FC2E86E29AC A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243 F3A04C595DB5B6A5F1ECA43E3B7BBB100D811BBE F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23",
+                "TOMCAT_MAJOR=7",
+                "TOMCAT_VERSION=7.0.109",
+                "TOMCAT_SHA512=612e830913bf1401bc9540e2273e465b0ee7ef63750a9969a80f1e9da9edb4888aa621fcc6fa5ba23cff94a40e91eb97e3f969b8064dabd49b2d0ea29e59b57e"
+            ],
+            "Cmd": [
+                "catalina.sh",
+                "run"
+            ],
+            "Image": "sha256:f3e4268a01e52ebafdbdcd735ecbc05cfaf7f9ab4161db4adf93d531fe5812d1",
+            "Volumes": null,
+            "WorkingDir": "/usr/local/tomcat",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": null
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 532923997,
+        "VirtualSize": 532923997,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/1fba628fc0df01740383f1b262a121d80146fe6a9e093def3cfc36db22a31119/diff:/var/lib/docker/overlay2/928d070a73e4d7634dbff2612012a8414d22c277030f48eacca7c637974e73c3/diff:/var/lib/docker/overlay2/3a1185ef645bbfbf56f7bb9e33374e99ac61a42c302d013de57c9b775259a9bc/diff:/var/lib/docker/overlay2/1600826c7e7a1db41b178a82bf8bab5dd5889c45cfdaab61938cd732ef3b776a/diff:/var/lib/docker/overlay2/cde1992ee7d7b54304b080d776a6e73d0834a7b4e4463d542f1824c610a5b22b/diff:/var/lib/docker/overlay2/4e3e57df8d7432f8e470acc2fd30734f1087776c48ec5058b3cae61ba59c3eea/diff:/var/lib/docker/overlay2/69b89003583bc6eea48932cddbb073eaebe6cc96b31948224237a3f6d6cab5a8/diff:/var/lib/docker/overlay2/22f61657d653df2954cd3a33ee281d11e9e0791cfdbe4de3ef01ea6e49fa66c0/diff:/var/lib/docker/overlay2/ed4c3f4cd37105250fe5cf5582774e1fdb4b80a2a2851f3d9bc1142b6c1041fb/diff",
+                "MergedDir": "/var/lib/docker/overlay2/33895d2a2e28e4ad05deece8a4deade5f451f99730c1d92bdb6eca91cddba12c/merged",
+                "UpperDir": "/var/lib/docker/overlay2/33895d2a2e28e4ad05deece8a4deade5f451f99730c1d92bdb6eca91cddba12c/diff",
+                "WorkDir": "/var/lib/docker/overlay2/33895d2a2e28e4ad05deece8a4deade5f451f99730c1d92bdb6eca91cddba12c/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:4e006334a6fdea37622f72b21eb75fe1484fc4f20ce8b8526187d6f7bd90a6fe",
+                "sha256:e4d0e810d54a9c47e3dface412b0b88045d156b18809a2e0bbfb0fc8a45d8127",
+                "sha256:fe6a4fdbedc0cbc560437fa700b3b034114e31a264f0818d0d32ed2ee6cbe7a3",
+                "sha256:7095af798ace32173839a61cbf101048434e1065185c0f29cc888e67158d990b",
+                "sha256:79c550eb7bd278d360284d86c39e05852c2026b64232267a43947300bcf54a2c",
+                "sha256:c3d00b097cce7df7dff99107ed0005fc4ceb14abaeac24316c8b120b4cd4c03a",
+                "sha256:aed5f5426b278d2800d114b061cc51b745d042ca1ef9294f8f9a77dfa5c19315",
+                "sha256:9d48355da13b8a355aaf6c479d386dc4280cb1e491271490e9f85d88831adb9b",
+                "sha256:9a7d423f0aca6fe94d7589b88bbd1f0ea7ba312ccac407a5a6fdce1f0728ed4e",
+                "sha256:0eaefafb498bae9e3be40bd9d93bd4d6aca4cf8fe281e97fe36ed3f598e45e4e"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]
+--[ec2-user@ip-172-31-17-119 ~]$ docker run -d -p 8081:8080 --name tomcat-server2 tomcat:7.0
+eeff275ce8433a36c5867dafb976b225f81717aa7d70ec6c884ae1397c60d211
+--[ec2-user@ip-172-31-17-119 ~]$ docker ps
+CONTAINER ID   IMAGE        COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+eeff275ce843   tomcat:7.0   "catalina.sh run"        7 seconds ago    Up 6 seconds    0.0.0.0:8081->8080/tcp, :::8081->8080/tcp   tomcat-server2
+167f18cb3982   tomcat:7.0   "catalina.sh run"        3 minutes ago    Up 3 minutes    8080/tcp                                    tomcat-server1
+7952f1c09c66   nginx        "/docker-entrypoint.…"   19 minutes ago   Up 18 minutes   80/tcp                                      nginx-server
+--[ec2-user@ip-172-31-17-119 ~]$ docker run -itd -p 8383:8080 --name tomcat-server3 tomcat
+Unable to find image 'tomcat:latest' locally
+latest: Pulling from library/tomcat
+43f89b94cd7d: Pull complete 
+a4452d37e1e4: Pull complete 
+66bf1e8cc497: Pull complete 
+39b9b405c53f: Pull complete 
+74594af5feb5: Pull complete 
+190e928f9c42: Pull complete 
+e55c53c8b3ca: Pull complete 
+64f862abfc3c: Pull complete                                                Digest: sha256:86ada4acd78ca43972ad9f31e09ef1da00ca181cc0a204e7c31dc566d1e5cd60
+Status: Downloaded newer image for tomcat:latest
+db2891b7bdebbb0b228cbe34782d161d7f5cf763286c0131a5e86494f6eea37a
+--[ec2-user@ip-172-31-17-119 ~]$ docker ps
+CONTAINER ID   IMAGE        COMMAND                  CREATED              STATUS              PORTS                                       NAMES
+db2891b7bdeb   tomcat       "catalina.sh run"        5 seconds ago        Up 3 seconds        0.0.0.0:8383->8080/tcp, :::8383->8080/tcp   tomcat-server3
+eeff275ce843   tomcat:7.0   "catalina.sh run"        About a minute ago   Up About a minute   0.0.0.0:8081->8080/tcp, :::8081->8080/tcp   tomcat-server2
+167f18cb3982   tomcat:7.0   "catalina.sh run"        5 minutes ago        Up 5 minutes        8080/tcp                                    tomcat-server1
+7952f1c09c66   nginx        "/docker-entrypoint.…"   20 minutes ago       Up 20 minutes       80/tcp                                      nginx-server
+--[ec2-user@ip-172-31-17-119 ~]$ docker run itd -p 80:8080 --name tomcat-server4 tomcat
+Unable to find image 'itd:latest' locally
+docker: Error response from daemon: pull access denied for itd, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+--[ec2-user@ip-172-31-17-119 ~]$ docker run -itd -p 80:8080 --name tomcat-server4 tomcat
+f5624818cce48dc1de777563835c889d8a9f7b1708d016070e1670ab65e9c028
+--[ec2-user@ip-172-31-17-119 ~]$ docker run -d -p 83:8080 --name tomcat-server5 tomcat:7.0
+6f7610c09cfa6266ecc479dacba3207f2e141975f58ce313ba0ecf12516a7874
+--[ec2-user@ip-172-31-17-119 ~]$ docker ps
+CONTAINER ID   IMAGE        COMMAND                  CREATED              STATUS              PORTS                                       NAMES
+6f7610c09cfa   tomcat:7.0   "catalina.sh run"        8 seconds ago        Up 7 seconds        0.0.0.0:83->8080/tcp, :::83->8080/tcp       tomcat-server5
+f5624818cce4   tomcat       "catalina.sh run"        About a minute ago   Up About a minute   0.0.0.0:80->8080/tcp, :::80->8080/tcp       tomcat-server4
+db2891b7bdeb   tomcat       "catalina.sh run"        3 minutes ago        Up 3 minutes        0.0.0.0:8383->8080/tcp, :::8383->8080/tcp   tomcat-server3
+eeff275ce843   tomcat:7.0   "catalina.sh run"        5 minutes ago        Up 5 minutes        0.0.0.0:8081->8080/tcp, :::8081->8080/tcp   tomcat-server2
+167f18cb3982   tomcat:7.0   "catalina.sh run"        8 minutes ago        Up 8 minutes        8080/tcp                                    tomcat-server1
+7952f1c09c66   nginx        "/docker-entrypoint.…"   24 minutes ago       Up 23 minutes       80/tcp                                      nginx-server
+--[ec2-user@ip-172-31-17-119 ~]$ docker exec -it ca5a68a9210/bin/bash
+"docker exec" requires at least 2 arguments.
+See 'docker exec --help'.
+
+Usage:  docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+
+Execute a command in a running container
+--[ec2-user@ip-172-31-17-119 ~]$ docker exec -it 6f7610c09cfa/bin/bash
+"docker exec" requires at least 2 arguments.
+See 'docker exec --help'.
+
+Usage:  docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+
+Execute a command in a running container
+--[ec2-user@ip-172-31-17-119 ~]$ docker exec -it 6f7610c09cfa /bin/bash
+root@6f7610c09cfa:/usr/local/tomcat# ls
+BUILDING.txt     LICENSE  README.md      RUNNING.txt  conf  logs            temp     webapps.dist
+CONTRIBUTING.md  NOTICE   RELEASE-NOTES  bin          lib   native-jni-lib  webapps  work
+root@6f7610c09cfa:/usr/local/tomcat# cd webapps.dist
+root@6f7610c09cfa:/usr/local/tomcat/webapps.dist# ls
+ROOT  docs  examples  host-manager  manager
+root@6f7610c09cfa:/usr/local/tomcat/webapps.dist# cp -R * ../webapps
+root@6f7610c09cfa:/usr/local/tomcat/webapps.dist# cd ..
+root@6f7610c09cfa:/usr/local/tomcat# ls
+BUILDING.txt     LICENSE  README.md      RUNNING.txt  conf  logs            temp     webapps.dist
+CONTRIBUTING.md  NOTICE   RELEASE-NOTES  bin          lib   native-jni-lib  webapps  work
+root@6f7610c09cfa:/usr/local/tomcat# cd webapps
+root@6f7610c09cfa:/usr/local/tomcat/webapps# ls
+ROOT  docs  examples  host-manager  manager
+root@6f7610c09cfa:/usr/local/tomcat/webapps# exit
+exit
+--[ec2-user@ip-172-31-17-119 ~]$ docker start 4b114
+Error response from daemon: No such container: 4b114
+Error: failed to start containers: 4b114
+[ec2-user@ip-172-31-17-119 ~]$ docker start 4b114
+Error response from daemon: No such container: 4b114
+Error: failed to start containers: 4b114
+--[ec2-user@ip-172-31-17-119 ~]$ docker start 4bll4
+Error response from daemon: No such container: 4bll4
+Error: failed to start containers: 4bll4
+--[ec2-user@ip-172-31-17-119 ~]$ docker start eeff2
+eeff2
+--[ec2-user@ip-172-31-17-119 ~]$ docker ps
+CONTAINER ID   IMAGE        COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+6f7610c09cfa   tomcat:7.0   "catalina.sh run"        10 minutes ago   Up 9 minutes    0.0.0.0:83->8080/tcp, :::83->8080/tcp       tomcat-server5
+f5624818cce4   tomcat       "catalina.sh run"        10 minutes ago   Up 10 minutes   0.0.0.0:80->8080/tcp, :::80->8080/tcp       tomcat-server4
+db2891b7bdeb   tomcat       "catalina.sh run"        13 minutes ago   Up 13 minutes   0.0.0.0:8383->8080/tcp, :::8383->8080/tcp   tomcat-server3
+eeff275ce843   tomcat:7.0   "catalina.sh run"        14 minutes ago   Up 14 minutes   0.0.0.0:8081->8080/tcp, :::8081->8080/tcp   tomcat-server2
+167f18cb3982   tomcat:7.0   "catalina.sh run"        18 minutes ago   Up 18 minutes   8080/tcp                                    tomcat-server1
+7952f1c09c66   nginx        "/docker-entrypoint.…"   33 minutes ago   Up 33 minutes   80/tcp                                      nginx-server
+--[ec2-user@ip-172-31-17-119 ~]$ docker start db289
+db289
+--[ec2-user@ip-172-31-17-119 ~]$ docker ps
+CONTAINER ID   IMAGE        COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+6f7610c09cfa   tomcat:7.0   "catalina.sh run"        11 minutes ago   Up 11 minutes   0.0.0.0:83->8080/tcp, :::83->8080/tcp       tomcat-server5
+f5624818cce4   tomcat       "catalina.sh run"        12 minutes ago   Up 12 minutes   0.0.0.0:80->8080/tcp, :::80->8080/tcp       tomcat-server4
+db2891b7bdeb   tomcat       "catalina.sh run"        14 minutes ago   Up 14 minutes   0.0.0.0:8383->8080/tcp, :::8383->8080/tcp   tomcat-server3
+eeff275ce843   tomcat:7.0   "catalina.sh run"        16 minutes ago   Up 16 minutes   0.0.0.0:8081->8080/tcp, :::8081->8080/tcp   tomcat-server2
+167f18cb3982   tomcat:7.0   "catalina.sh run"        19 minutes ago   Up 19 minutes   8080/tcp                                    tomcat-server1
+7952f1c09c66   nginx        "/docker-entrypoint.…"   35 minutes ago   Up 35 minutes   80/tcp                                      nginx-server
+--[ec2-user@ip-172-31-17-119 ~]$ docker start f5624
+f5624
+--[ec2-user@ip-172-31-17-119 ~]$ docker start 6f761
+6f761
+--[ec2-user@ip-172-31-17-119 ~]$ docker ps
+CONTAINER ID   IMAGE        COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+6f7610c09cfa   tomcat:7.0   "catalina.sh run"        13 minutes ago   Up 13 minutes   0.0.0.0:83->8080/tcp, :::83->8080/tcp       tomcat-server5
+f5624818cce4   tomcat       "catalina.sh run"        14 minutes ago   Up 14 minutes   0.0.0.0:80->8080/tcp, :::80->8080/tcp       tomcat-server4
+db2891b7bdeb   tomcat       "catalina.sh run"        16 minutes ago   Up 16 minutes   0.0.0.0:8383->8080/tcp, :::8383->8080/tcp   tomcat-server3
+eeff275ce843   tomcat:7.0   "catalina.sh run"        18 minutes ago   Up 18 minutes   0.0.0.0:8081->8080/tcp, :::8081->8080/tcp   tomcat-server2
+167f18cb3982   tomcat:7.0   "catalina.sh run"        21 minutes ago   Up 21 minutes   8080/tcp                                    tomcat-server1
+7952f1c09c66   nginx        "/docker-entrypoint.…"   37 minutes ago   Up 37 minutes   80/tcp                                      nginx-server
+--[ec2-user@ip-172-31-17-119 ~]$ docker pull ubuntu:20.04
+20.04: Pulling from library/ubuntu
+96d54c3075c9: Pull complete                                               Digest: sha256:ed4a42283d9943135ed87d4ee34e542f7f5ad9ecf2f244870e23122f703f91c2
+Status: Downloaded newer image for ubuntu:20.04
+docker.io/library/ubuntu:20.04
+--[ec2-user@ip-172-31-17-119 ~]$ docker pull ubuntu:18.04
+18.04: Pulling from library/ubuntu
+7c457f213c76: Pull complete                                               Digest: sha256:152dc042452c496007f07ca9127571cb9c29697f42acbfad72324b2bb2e43c98
+Status: Downloaded newer image for ubuntu:18.04
+docker.io/library/ubuntu:18.04
+--[ec2-user@ip-172-31-17-119 ~]$ docker run --name ubuntu-server1 ubuntu:20.04
+--[ec2-user@ip-172-31-17-119 ~]$ docker ps
+CONTAINER ID   IMAGE        COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+6f7610c09cfa   tomcat:7.0   "catalina.sh run"        15 minutes ago   Up 15 minutes   0.0.0.0:83->8080/tcp, :::83->8080/tcp       tomcat-server5
+f5624818cce4   tomcat       "catalina.sh run"        16 minutes ago   Up 16 minutes   0.0.0.0:80->8080/tcp, :::80->8080/tcp       tomcat-server4
+db2891b7bdeb   tomcat       "catalina.sh run"        18 minutes ago   Up 18 minutes   0.0.0.0:8383->8080/tcp, :::8383->8080/tcp   tomcat-server3
+eeff275ce843   tomcat:7.0   "catalina.sh run"        20 minutes ago   Up 20 minutes   0.0.0.0:8081->8080/tcp, :::8081->8080/tcp   tomcat-server2
+167f18cb3982   tomcat:7.0   "catalina.sh run"        24 minutes ago   Up 24 minutes   8080/tcp                                    tomcat-server1
+7952f1c09c66   nginx        "/docker-entrypoint.…"   39 minutes ago   Up 39 minutes   80/tcp                                      nginx-server
+--[ec2-user@ip-172-31-17-119 ~]$ docker run -d --name ubuntu-server2 ubuntu:18.04
+010c088f3cae14a904fc932a5a89fcbd825256e51612975bff5b059f2f73848c
+--[ec2-user@ip-172-31-17-119 ~]$ docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED              STATUS                          PORTS                                       NAMES
+010c088f3cae   ubuntu:18.04   "/bin/bash"              14 seconds ago       Exited (0) 13 seconds ago                                                   ubuntu-server2
+210f59f0438c   ubuntu:20.04   "/bin/bash"              About a minute ago   Exited (0) About a minute ago                                               ubuntu-server1
+6f7610c09cfa   tomcat:7.0     "catalina.sh run"        16 minutes ago       Up 16 minutes                   0.0.0.0:83->8080/tcp, :::83->8080/tcp       tomcat-server5
+f5624818cce4   tomcat         "catalina.sh run"        17 minutes ago       Up 17 minutes                   0.0.0.0:80->8080/tcp, :::80->8080/tcp       tomcat-server4
+db2891b7bdeb   tomcat         "catalina.sh run"        19 minutes ago       Up 19 minutes                   0.0.0.0:8383->8080/tcp, :::8383->8080/tcp   tomcat-server3
+eeff275ce843   tomcat:7.0     "catalina.sh run"        21 minutes ago       Up 21 minutes                   0.0.0.0:8081->8080/tcp, :::8081->8080/tcp   tomcat-server2
+167f18cb3982   tomcat:7.0     "catalina.sh run"        25 minutes ago       Up 25 minutes                   8080/tcp                                    tomcat-server1
+7952f1c09c66   nginx          "/docker-entrypoint.…"   40 minutes ago       Up 40 minutes                   80/tcp                                      nginx-server
+--[ec2-user@ip-172-31-17-119 ~]$ docker logs -f db289
+Using CATALINA_BASE:   /usr/local/tomcat
+Using CATALINA_HOME:   /usr/local/tomcat
+Using CATALINA_TMPDIR: /usr/local/tomcat/temp
+Using JRE_HOME:        /opt/java/openjdk
+Using CLASSPATH:       /usr/local/tomcat/bin/bootstrap.jar:/usr/local/tomcat/bin/tomcat-juli.jar
+Using CATALINA_OPTS:   
+15-Nov-2023 13:57:16.534 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.15
+15-Nov-2023 13:57:16.552 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Oct 11 2023 23:38:40 UTC
+15-Nov-2023 13:57:16.553 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.15.0
+15-Nov-2023 13:57:16.553 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+15-Nov-2023 13:57:16.555 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.1.61-85.141.amzn2023.x86_64
+15-Nov-2023 13:57:16.555 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+15-Nov-2023 13:57:16.557 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /opt/java/openjdk
+15-Nov-2023 13:57:16.558 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.1+12-LTS
+15-Nov-2023 13:57:16.558 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+15-Nov-2023 13:57:16.558 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /usr/local/tomcat
+15-Nov-2023 13:57:16.558 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /usr/local/tomcat
+15-Nov-2023 13:57:16.579 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/usr/local/tomcat/conf/logging.properties
+15-Nov-2023 13:57:16.580 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+15-Nov-2023 13:57:16.580 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+15-Nov-2023 13:57:16.580 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+15-Nov-2023 13:57:16.580 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+15-Nov-2023 13:57:16.581 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+15-Nov-2023 13:57:16.581 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+15-Nov-2023 13:57:16.581 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+15-Nov-2023 13:57:16.582 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+15-Nov-2023 13:57:16.582 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+15-Nov-2023 13:57:16.582 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/usr/local/tomcat
+15-Nov-2023 13:57:16.582 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/usr/local/tomcat
+15-Nov-2023 13:57:16.582 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/usr/local/tomcat/temp
+15-Nov-2023 13:57:16.587 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.6] using APR version [1.7.0].
+15-Nov-2023 13:57:16.593 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.2 15 Mar 2022]
+15-Nov-2023 13:57:17.126 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+15-Nov-2023 13:57:17.207 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [938] milliseconds
+15-Nov-2023 13:57:17.295 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+15-Nov-2023 13:57:17.296 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.15]
+15-Nov-2023 13:57:17.320 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+15-Nov-2023 13:57:17.366 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [156] milliseconds
+
+
+
+--[ec2-user@ip-172-31-17-119 ~]$ docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS                      PORTS                                       NAMES
+010c088f3cae   ubuntu:18.04   "/bin/bash"              11 minutes ago   Exited (0) 11 minutes ago                                               ubuntu-server2
+210f59f0438c   ubuntu:20.04   "/bin/bash"              12 minutes ago   Exited (0) 12 minutes ago                                               ubuntu-server1
+6f7610c09cfa   tomcat:7.0     "catalina.sh run"        28 minutes ago   Up 28 minutes               0.0.0.0:83->8080/tcp, :::83->8080/tcp       tomcat-server5
+f5624818cce4   tomcat         "catalina.sh run"        29 minutes ago   Up 29 minutes               0.0.0.0:80->8080/tcp, :::80->8080/tcp       tomcat-server4
+db2891b7bdeb   tomcat         "catalina.sh run"        31 minutes ago   Up 31 minutes               0.0.0.0:8383->8080/tcp, :::8383->8080/tcp   tomcat-server3
+eeff275ce843   tomcat:7.0     "catalina.sh run"        33 minutes ago   Up 33 minutes               0.0.0.0:8081->8080/tcp, :::8081->8080/tcp   tomcat-server2
+167f18cb3982   tomcat:7.0     "catalina.sh run"        36 minutes ago   Up 36 minutes               8080/tcp                                    tomcat-server1
+7952f1c09c66   nginx          "/docker-entrypoint.…"   52 minutes ago   Up 52 minutes               80/tcp                                      nginx-server
+--[ec2-user@ip-172-31-17-119 ~]$ docker exec -it 210f5
+"docker exec" requires at least 2 arguments.
+See 'docker exec --help'.
+
+Usage:  docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+
+Execute a command in a running container
+--[ec2-user@ip-172-31-17-119 ~]$ docker start 210f5
+210f5
+--[ec2-user@ip-172-31-17-119 ~]$ docker stop $(docker ps -q)
+6f7610c09cfa
+f5624818cce4
+db2891b7bdeb
+eeff275ce843
+167f18cb3982
+7952f1c09c66
+--[ec2-user@ip-172-31-17-119 ~]$ docker start 210f5
+210f5
+--[ec2-user@ip-172-31-17-119 ~]$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+--[ec2-user@ip-172-31-17-119 ~]$ docker run -it ubuntu
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+aece8493d397: Pull complete Digest: sha256:2b7412e6465c3c7fc5bb21d3e6f1917c167358449fecac8176c6e496e5c1f05f
+Status: Downloaded newer image for ubuntu:latest
+root@4cd54723ba58:/# exit
+exit
+--[ec2-user@ip-172-31-17-119 ~]$ docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS                            PORTS     NAMES
+4cd54723ba58   ubuntu         "/bin/bash"              15 seconds ago   Exited (0) 8 seconds ago                    dazzling_aryabhata
+010c088f3cae   ubuntu:18.04   "/bin/bash"              17 minutes ago   Exited (0) 17 minutes ago                   ubuntu-server2
+210f59f0438c   ubuntu:20.04   "/bin/bash"              18 minutes ago   Exited (0) About a minute ago               ubuntu-server1
+6f7610c09cfa   tomcat:7.0     "catalina.sh run"        33 minutes ago   Exited (143) About a minute ago             tomcat-server5
+f5624818cce4   tomcat         "catalina.sh run"        34 minutes ago   Exited (143) About a minute ago             tomcat-server4
+db2891b7bdeb   tomcat         "catalina.sh run"        36 minutes ago   Exited (143) About a minute ago             tomcat-server3
+eeff275ce843   tomcat:7.0     "catalina.sh run"        38 minutes ago   Exited (143) About a minute ago             tomcat-server2
+167f18cb3982   tomcat:7.0     "catalina.sh run"        42 minutes ago   Exited (143) About a minute ago             tomcat-server1
+7952f1c09c66   nginx          "/docker-entrypoint.…"   57 minutes ago   Exited (0) About a minute ago               nginx-server
+--[ec2-user@ip-172-31-17-119 ~]$ docker rm 210f5
+210f5
+--[ec2-user@ip-172-31-17-119 ~]$ docker rm 010c0
+010c0
+--[ec2-user@ip-172-31-17-119 ~]$ docker ps -a
+CONTAINER ID   IMAGE        COMMAND                  CREATED          STATUS                       PORTS     NAMES
+4cd54723ba58   ubuntu       "/bin/bash"              2 minutes ago    Exited (0) 2 minutes ago               dazzling_aryabhata
+6f7610c09cfa   tomcat:7.0   "catalina.sh run"        35 minutes ago   Exited (143) 3 minutes ago             tomcat-server5
+f5624818cce4   tomcat       "catalina.sh run"        36 minutes ago   Exited (143) 3 minutes ago             tomcat-server4
+db2891b7bdeb   tomcat       "catalina.sh run"        38 minutes ago   Exited (143) 3 minutes ago             tomcat-server3
+eeff275ce843   tomcat:7.0   "catalina.sh run"        40 minutes ago   Exited (143) 3 minutes ago             tomcat-server2
+167f18cb3982   tomcat:7.0   "catalina.sh run"        44 minutes ago   Exited (143) 3 minutes ago             tomcat-server1
+7952f1c09c66   nginx        "/docker-entrypoint.…"   59 minutes ago   Exited (0) 3 minutes ago               nginx-server
+--[ec2-user@ip-172-31-17-119 ~]$ docker run -it --name ubuntu-server1 ubuntu:20.04
+--root@6459c5ae0846:/# ls
+bin  boot  dev  etc  home  lib  lib32  lib64  libx32  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+--root@6459c5ae0846:/# cd root
+--root@6459c5ae0846:~# ls
+--root@6459c5ae0846:~# touch my_file.txt
+--root@6459c5ae0846:~# ls
+my_file.txt
+--root@6459c5ae0846:~# apt -get install node.js
+E: Command line option 'g' [from -get] is not understood in combination with the other options.
+--root@6459c5ae0846:~# apt-get install node.js
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package node.js
+E: Couldn't find any package by glob 'node.js'
+E: Couldn't find any package by regex 'node.js'
+--root@6459c5ae0846:~# apt-get install node.js
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package node.js
+E: Couldn't find any package by glob 'node.js'
+E: Couldn't find any package by regex 'node.js'
+--root@6459c5ae0846:~# sudo apt-get install -y nodejs
+bash: sudo: command not found
+--root@6459c5ae0846:~# apt-get install -y postgres
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package postgres
+--root@6459c5ae0846:~# apt install -y nodejs
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package nodejs
+--root@6459c5ae0846:~# apt update  
+Get:1 http://archive.ubuntu.com/ubuntu focal InRelease [265 kB]
+Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:4 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [1125 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal/main amd64 Packages [1275 kB]
+18% [4 Packages store 0 B] [6 Packages 551 kB/1275 kB 43%] [Waiting for hea                                                                           Get:7 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages [11.3 MB]
+21% [6 Packages store 0 B] [7 Packages 4871 B/11.3 MB 0%] [Waiting for head                                                                           Get:8 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [3195 kB]
+21% [6 Packages store 0 B] [7 Packages 4871 B/11.3 MB 0%] [8 Packages 5143                                                                            43% [8 Packages store 0 B] [7 Packages 4661 kB/11.3 MB 41%] [Waiting for he                                                                           Get:9 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [29.3 kB]
+43% [8 Packages store 0 B] [7 Packages 4661 kB/11.3 MB 41%] [9 Packages 0 B                                                                           Get:10 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [3017 kB]
+43% [8 Packages store 0 B] [7 Packages 4727 kB/11.3 MB 42%] [10 Packages 0                                                                            Get:11 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [177 kB]
+Get:12 http://archive.ubuntu.com/ubuntu focal/restricted amd64 Packages [33.4 kB]
+Get:13 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [32.0 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [3683 kB]
+Get:15 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1429 kB]
+Get:16 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [3166 kB]
+Get:17 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [28.6 kB]
+Get:18 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [55.2 kB]
+Fetched 29.2 MB in 4s (8234 kB/s)                      
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+4 packages can be upgraded. Run 'apt list --upgradable' to see them.
+--root@6459c5ae0846:~# apt list --upgradable
+Listing... Done
+apt/focal-updates 2.0.10 amd64 [upgradable from: 2.0.9]
+libapt-pkg6.0/focal-updates 2.0.10 amd64 [upgradable from: 2.0.9]
+libprocps8/focal-updates,focal-security 2:3.3.16-1ubuntu2.4 amd64 [upgradable from: 2:3.3.16-1ubuntu2.3]
+procps/focal-updates,focal-security 2:3.3.16-1ubuntu2.4 amd64 [upgradable from: 2:3.3.16-1ubuntu2.3]
+--root@6459c5ae0846:~# apt install
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+--root@6459c5ae0846:~# apt install nodejs
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  ca-certificates libc-ares2 libicu66 libnghttp2-14 libnode64 libssl1.1 libuv1 nodejs-doc openssl tzdata
+Suggested packages:
+  npm
+The following NEW packages will be installed:
+  ca-certificates libc-ares2 libicu66 libnghttp2-14 libnode64 libssl1.1 libuv1 nodejs nodejs-doc openssl tzdata
+0 upgraded, 11 newly installed, 0 to remove and 4 not upgraded.
+Need to get 17.9 MB of archives.
+After this operation, 74.6 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libssl1.1 amd64 1.1.1f-1ubuntu2.20 [1321 kB]
+Get:2 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 openssl amd64 1.1.1f-1ubuntu2.20 [620 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 ca-certificates all 20230311ubuntu0.20.04.1 [152 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 tzdata all 2023c-0ubuntu0.20.04.2 [301 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libicu66 amd64 66.1-2ubuntu2.1 [8515 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libuv1 amd64 1.34.2-1ubuntu1.3 [80.8 kB]
+Get:7 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libnghttp2-14 amd64 1.40.0-1ubuntu0.1 [78.5 kB]
+Get:8 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libc-ares2 amd64 1.15.0-1ubuntu0.4 [36.9 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 libnode64 amd64 10.19.0~dfsg-3ubuntu1.2 [5765 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 nodejs-doc all 10.19.0~dfsg-3ubuntu1.2 [942 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 nodejs amd64 10.19.0~dfsg-3ubuntu1.2 [61.4 kB]
+Fetched 17.9 MB in 2s (11.2 MB/s)   
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libssl1.1:amd64.
+(Reading database ... 4126 files and directories currently installed.)
+Preparing to unpack .../00-libssl1.1_1.1.1f-1ubuntu2.20_amd64.deb ...
+Unpacking libssl1.1:amd64 (1.1.1f-1ubuntu2.20) ...
+Selecting previously unselected package openssl.
+Preparing to unpack .../01-openssl_1.1.1f-1ubuntu2.20_amd64.deb ...
+Unpacking openssl (1.1.1f-1ubuntu2.20) ...
+Selecting previously unselected package ca-certificates.
+Preparing to unpack .../02-ca-certificates_20230311ubuntu0.20.04.1_all.deb ...
+Unpacking ca-certificates (20230311ubuntu0.20.04.1) ...
+Selecting previously unselected package tzdata.
+Preparing to unpack .../03-tzdata_2023c-0ubuntu0.20.04.2_all.deb ...
+Unpacking tzdata (2023c-0ubuntu0.20.04.2) ...
+Selecting previously unselected package libicu66:amd64.
+Preparing to unpack .../04-libicu66_66.1-2ubuntu2.1_amd64.deb ...
+Unpacking libicu66:amd64 (66.1-2ubuntu2.1) ...
+Selecting previously unselected package libuv1:amd64.
+Preparing to unpack .../05-libuv1_1.34.2-1ubuntu1.3_amd64.deb ...
+Unpacking libuv1:amd64 (1.34.2-1ubuntu1.3) ...
+Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../06-libnghttp2-14_1.40.0-1ubuntu0.1_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.40.0-1ubuntu0.1) ...
+Selecting previously unselected package libc-ares2:amd64.
+Preparing to unpack .../07-libc-ares2_1.15.0-1ubuntu0.4_amd64.deb ...
+Unpacking libc-ares2:amd64 (1.15.0-1ubuntu0.4) ...
+Selecting previously unselected package libnode64:amd64.
+Preparing to unpack .../08-libnode64_10.19.0~dfsg-3ubuntu1.2_amd64.deb ...
+Unpacking libnode64:amd64 (10.19.0~dfsg-3ubuntu1.2) ...
+Selecting previously unselected package nodejs-doc.
+Preparing to unpack .../09-nodejs-doc_10.19.0~dfsg-3ubuntu1.2_all.deb ...
+Unpacking nodejs-doc (10.19.0~dfsg-3ubuntu1.2) ...
+Selecting previously unselected package nodejs.
+Preparing to unpack .../10-nodejs_10.19.0~dfsg-3ubuntu1.2_amd64.deb ...
+Unpacking nodejs (10.19.0~dfsg-3ubuntu1.2) ...
+Setting up libssl1.1:amd64 (1.1.1f-1ubuntu2.20) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.30.0 /usr/local/share/perl/5.30.0 /usr/lib/x86_64-linux-gnu/perl5/5.30 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.30 /usr/share/perl/5.30 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Setting up libnghttp2-14:amd64 (1.40.0-1ubuntu0.1) ...
+Setting up libc-ares2:amd64 (1.15.0-1ubuntu0.4) ...
+Setting up tzdata (2023c-0ubuntu0.20.04.2) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.30.0 /usr/local/share/perl/5.30.0 /usr/lib/x86_64-linux-gnu/perl5/5.30 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.30 /usr/share/perl/5.30 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Configuring tzdata
+------------------
+
+Please select the geographic area in which you live. Subsequent configuration questions will narrow this down by presenting a list of cities,
+representing the time zones in which they are located.
+
+  1. Africa   3. Antarctica  5. Arctic  7. Atlantic  9. Indian    11. SystemV  13. Etc
+  2. America  4. Australia   6. Asia    8. Europe    10. Pacific  12. US
+Geographic area: 9
+
+Please select the city or region corresponding to your time zone.
+
+  1. Antananarivo  3. Christmas  5. Comoro     7. Mahe      9. Mauritius  11. Reunion
+  2. Chagos        4. Cocos      6. Kerguelen  8. Maldives  10. Mayotte
+Time zone: 9
+
+
+Current default time zone: 'Indian/Mauritius'
+Local time is now:      Wed Nov 15 18:42:41 +04 2023.
+Universal Time is now:  Wed Nov 15 14:42:41 UTC 2023.
+Run 'dpkg-reconfigure tzdata' if you wish to change it.
+
+Setting up libuv1:amd64 (1.34.2-1ubuntu1.3) ...
+Setting up nodejs-doc (10.19.0~dfsg-3ubuntu1.2) ...
+Setting up openssl (1.1.1f-1ubuntu2.20) ...
+Setting up libicu66:amd64 (66.1-2ubuntu2.1) ...
+Setting up ca-certificates (20230311ubuntu0.20.04.1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.30.0 /usr/local/share/perl/5.30.0 /usr/lib/x86_64-linux-gnu/perl5/5.30 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.30 /usr/share/perl/5.30 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Updating certificates in /etc/ssl/certs...
+137 added, 0 removed; done.
+Setting up libnode64:amd64 (10.19.0~dfsg-3ubuntu1.2) ...
+Setting up nodejs (10.19.0~dfsg-3ubuntu1.2) ...
+update-alternatives: using /usr/bin/nodejs to provide /usr/bin/js (js) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/js.1.gz because associated file /usr/share/man/man1/nodejs.1.gz (of link group js) doesn't exist
+Processing triggers for libc-bin (2.31-0ubuntu9.12) ...
+Processing triggers for ca-certificates (20230311ubuntu0.20.04.1) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+--root@6459c5ae0846:~# cd ..
+--root@6459c5ae0846:/# ls
+bin  boot  dev  etc  home  lib  lib32  lib64  libx32  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+--root@6459c5ae0846:/# apt install nodejs
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+nodejs is already the newest version (10.19.0~dfsg-3ubuntu1.2).
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+--root@6459c5ae0846:/# apt install postgres
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package postgres
+--root@6459c5ae0846:/# apt update
+Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease
+Hit:2 http://security.ubuntu.com/ubuntu focal-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+4 packages can be upgraded. Run 'apt list --upgradable' to see them.
+--root@6459c5ae0846:/# apt install
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+--root@6459c5ae0846:/# apt-get install postgres
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package postgres
+--root@6459c5ae0846:/# apt install mongodb
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  libboost-filesystem1.71.0 libboost-iostreams1.71.0 libboost-program-options1.71.0 libgoogle-perftools4 libpcap0.8 libpcrecpp0v5 libsasl2-2
+  libsasl2-modules libsasl2-modules-db libsnappy1v5 libstemmer0d libtcmalloc-minimal4 libunwind8 libyaml-cpp0.6 mongo-tools mongodb-clients
+  mongodb-server mongodb-server-core
+Suggested packages:
+  libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal libsasl2-modules-ldap libsasl2-modules-otp libsasl2-modules-sql
+The following NEW packages will be installed:
+  libboost-filesystem1.71.0 libboost-iostreams1.71.0 libboost-program-options1.71.0 libgoogle-perftools4 libpcap0.8 libpcrecpp0v5 libsasl2-2
+  libsasl2-modules libsasl2-modules-db libsnappy1v5 libstemmer0d libtcmalloc-minimal4 libunwind8 libyaml-cpp0.6 mongo-tools mongodb
+  mongodb-clients mongodb-server mongodb-server-core
+0 upgraded, 19 newly installed, 0 to remove and 4 not upgraded.
+Need to get 57.1 MB of archives.
+After this operation, 235 MB of additional disk space will be used.
+Do you want to continue? [Y/n] exit
+Abort.
+--root@6459c5ae0846:/# exit
+exit
+--[ec2-user@ip-172-31-17-119 ~]$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+--[ec2-user@ip-172-31-17-119 ~]$ docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED             STATUS                        PORTS     NAMES
+6459c5ae0846   ubuntu:20.04   "/bin/bash"              8 minutes ago       Exited (1) 13 seconds ago               ubuntu-server1
+4cd54723ba58   ubuntu         "/bin/bash"              11 minutes ago      Exited (0) 11 minutes ago               dazzling_aryabhata
+6f7610c09cfa   tomcat:7.0     "catalina.sh run"        45 minutes ago      Exited (143) 12 minutes ago             tomcat-server5
+f5624818cce4   tomcat         "catalina.sh run"        46 minutes ago      Exited (143) 12 minutes ago             tomcat-server4
+db2891b7bdeb   tomcat         "catalina.sh run"        48 minutes ago      Exited (143) 12 minutes ago             tomcat-server3
+eeff275ce843   tomcat:7.0     "catalina.sh run"        50 minutes ago      Exited (143) 12 minutes ago             tomcat-server2
+167f18cb3982   tomcat:7.0     "catalina.sh run"        53 minutes ago      Exited (143) 12 minutes ago             tomcat-server1
+7952f1c09c66   nginx          "/docker-entrypoint.…"   About an hour ago   Exited (0) 12 minutes ago               nginx-server
+--[ec2-user@ip-172-31-17-119 ~]$ docker run -it --name ubuntu-server2 ubuntu:20.04
+--root@2751e17ec38f:/# ls
+bin  boot  dev  etc  home  lib  lib32  lib64  libx32  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+--root@2751e17ec38f:/# cd root
+--root@2751e17ec38f:~# ls
+--root@2751e17ec38f:~# exit
+exit
+--[ec2-user@ip-172-31-17-119 ~]$ docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED             STATUS                          PORTS     NAMES
+2751e17ec38f   ubuntu:20.04   "/bin/bash"              23 seconds ago      Exited (0) 6 seconds ago                  ubuntu-server2
+6459c5ae0846   ubuntu:20.04   "/bin/bash"              9 minutes ago       Exited (1) About a minute ago             ubuntu-server1
+4cd54723ba58   ubuntu         "/bin/bash"              12 minutes ago      Exited (0) 12 minutes ago                 dazzling_aryabhata
+6f7610c09cfa   tomcat:7.0     "catalina.sh run"        46 minutes ago      Exited (143) 14 minutes ago               tomcat-server5
+f5624818cce4   tomcat         "catalina.sh run"        47 minutes ago      Exited (143) 14 minutes ago               tomcat-server4
+db2891b7bdeb   tomcat         "catalina.sh run"        49 minutes ago      Exited (143) 14 minutes ago               tomcat-server3
+eeff275ce843   tomcat:7.0     "catalina.sh run"        51 minutes ago      Exited (143) 14 minutes ago               tomcat-server2
+167f18cb3982   tomcat:7.0     "catalina.sh run"        54 minutes ago      Exited (143) 14 minutes ago               tomcat-server1
+7952f1c09c66   nginx          "/docker-entrypoint.…"   About an hour ago   Exited (0) 14 minutes ago                 nginx-server
+--[ec2-user@ip-172-31-17-119 ~]$ docker kill 2751e17ec38f
+Error response from daemon: Cannot kill container: 2751e17ec38f: Container 2751e17ec38f13c747773173c2ff5a60eba6652529ae4f2201bda37e6239ba44 is not running
+--[ec2-user@ip-172-31-17-119 ~]$ docker run --name ubuntu-server3 ubuntu:20.04
+--[ec2-user@ip-172-31-17-119 ~]$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+--[ec2-user@ip-172-31-17-119 ~]$ docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED             STATUS                        PORTS     NAMES
+b15515000dfd   ubuntu:20.04   "/bin/bash"              15 seconds ago      Exited (0) 14 seconds ago               ubuntu-server3
+2751e17ec38f   ubuntu:20.04   "/bin/bash"              3 minutes ago       Exited (0) 2 minutes ago                ubuntu-server2
+6459c5ae0846   ubuntu:20.04   "/bin/bash"              12 minutes ago      Exited (1) 4 minutes ago                ubuntu-server1
+4cd54723ba58   ubuntu         "/bin/bash"              15 minutes ago      Exited (0) 15 minutes ago               dazzling_aryabhata
+6f7610c09cfa   tomcat:7.0     "catalina.sh run"        49 minutes ago      Exited (143) 16 minutes ago             tomcat-server5
+f5624818cce4   tomcat         "catalina.sh run"        50 minutes ago      Exited (143) 16 minutes ago             tomcat-server4
+db2891b7bdeb   tomcat         "catalina.sh run"        52 minutes ago      Exited (143) 16 minutes ago             tomcat-server3
+eeff275ce843   tomcat:7.0     "catalina.sh run"        54 minutes ago      Exited (143) 16 minutes ago             tomcat-server2
+167f18cb3982   tomcat:7.0     "catalina.sh run"        57 minutes ago      Exited (143) 16 minutes ago             tomcat-server1
+7952f1c09c66   nginx          "/docker-entrypoint.…"   About an hour ago   Exited (0) 16 minutes ago               nginx-server
+--[ec2-user@ip-172-31-17-119 ~]$ docker commit b15515000dfd 
+sha256:50cf2ecf17ee94a9946c29bbf32650425f0ad146cb0dcf270cc46127979f80bc
+--[ec2-user@ip-172-31-17-119 ~]$ docker image ls
+REPOSITORY   TAG       IMAGE ID       CREATED         SIZE
+<none>       <none>    50cf2ecf17ee   9 seconds ago   72.8MB
+nginx        latest    c20060033e06   2 weeks ago     187MB
+tomcat       latest    fa51ad4dee22   2 weeks ago     460MB
+ubuntu       latest    e4c58958181a   5 weeks ago     77.8MB
+ubuntu       20.04     bf40b7bc7a11   6 weeks ago     72.8MB
+ubuntu       18.04     f9a80a55f492   5 months ago    63.2MB
+tomcat       7.0       9dfd74e6bc2f   2 years ago     533MB
+--[ec2-user@ip-172-31-17-119 ~]$ docker run -it --name cont-from-my-img 50cf250cf2ecf17ee
+--root@20574c87bb10:/# cd
+--root@20574c87bb10:~# ls
+--root@20574c87bb10:~# cd ..
+--root@20574c87bb10:/# ls
+bin  boot  dev  etc  home  lib  lib32  lib64  libx32  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+--root@20574c87bb10:/# cd root
+--root@20574c87bb10:~# ls
+--root@20574c87bb10:~# cd bin
+bash: cd: bin: No such file or directory
+--root@20574c87bb10:~# cd ,,
+bash: cd: ,,: No such file or directory
+--groot@20574c87bb10:~# cd ..
+--root@20574c87bb10:/# ls
+bin  boot  dev  etc  home  lib  lib32  lib64  libx32  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+--root@20574c87bb10:/# cd bin
+--root@20574c87bb10:/bin# ls
+'['             clear_console             faillog     ln                 paste              setterm     umount
+ addpart        cmp                       fallocate   locale             pathchk            sg          uname
+ apt            comm                      false       locale-check       perl               sh          uncompress
+ apt-cache      cp                        fgrep       localedef          perl5.30.0         sha1sum     unexpand
+ apt-cdrom      csplit                    fincore     logger             pgrep              sha224sum   uniq
+ apt-config     cut                       find        login              pidof              sha256sum   unlink
+ apt-get        dash                      findmnt     logname            pinky              sha384sum   unshare
+ apt-key        date                      flock       ls                 pkill              sha512sum   update-alternatives
+ apt-mark       dd                        fmt         lsattr             pldd               shred       uptime
+ arch           deb-systemd-helper        fold        lsblk              pmap               shuf        users
+ awk            deb-systemd-invoke        free        lscpu              pr                 skill       utmpdump
+ b2sum          debconf                   getconf     lsipc              printenv           slabtop     vdir
+ base32         debconf-apt-progress      getent      lslocks            printf             sleep       vmstat
+ base64         debconf-communicate       getopt      lslogins           prlimit            snice       w
+ basename       debconf-copydb            gpasswd     lsmem              ps                 sort        w.procps
+ bash           debconf-escape            gpgv        lsns               ptx                split       wall
+ bashbug        debconf-set-selections    grep        man                pwd                stat        watch
+ bunzip2        debconf-show              groups      mawk               pwdx               stdbuf      wc
+ bzcat          delpart                   gunzip      mcookie            rbash              stty        wdctl
+ bzcmp          df                        gzexe       md5sum             readlink           su          whereis
+ bzdiff         diff                      gzip        md5sum.textutils   realpath           sum         which
+ bzegrep        diff3                     head        mesg               rename.ul          sync        who
+ bzexe          dir                       hostid      mkdir              renice             tabs        whoami
+ bzfgrep        dircolors                 hostname    mkfifo             reset              tac         x86_64
+ bzgrep         dirname                   i386        mknod              resizepart         tail        xargs
+ bzip2          dmesg                     iconv       mktemp             rev                tar         yes
+ bzip2recover   dnsdomainname             id          more               rgrep              taskset     ypdomainname
+ bzless         domainname                infocmp     mount              rm                 tee         zcat
+ bzmore         dpkg                      infotocap   mountpoint         rmdir              tempfile    zcmp
+ captoinfo      dpkg-deb                  install     mv                 run-parts          test        zdiff
+ cat            dpkg-divert               ionice      namei              runcon             tic         zdump
+ catchsegv      dpkg-maintscript-helper   ipcmk       nawk               savelog            timeout     zegrep
+ chage          dpkg-query                ipcrm       newgrp             script             tload       zfgrep
+ chattr         dpkg-split                ipcs        nice               scriptreplay       toe         zforce
+ chcon          dpkg-statoverride         ischroot    nisdomainname      sdiff              top         zgrep
+ chfn           dpkg-trigger              join        nl                 sed                touch       zless
+ chgrp          du                        kill        nohup              select-editor      tput        zmore
+ chmod          echo                      last        nproc              sensible-browser   tr          znew
+ choom          egrep                     lastb       nsenter            sensible-editor    true
+ chown          env                       lastlog     numfmt             sensible-pager     truncate
+ chrt           expand                    ldd         od                 seq                tset
+ chsh           expiry                    link        pager              setarch            tsort
+ cksum          expr                      linux32     partx              setpriv            tty
+ clear          factor                    linux64     passwd             setsid             tzselect
+root@20574c87bb10:/bin# cd ..
+root@20574c87bb10:/# ls       
+bin  boot  dev  etc  home  lib  lib32  lib64  libx32  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+root@20574c87bb10:/# cd lib64
+root@20574c87bb10:/lib64# ls
+ld-linux-x86-64.so.2
+root@20574c87bb10:/lib64# cd ..
+root@20574c87bb10:/# ls
+bin  boot  dev  etc  home  lib  lib32  lib64  libx32  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+root@20574c87bb10:/# cd opt
+root@20574c87bb10:/opt# ls
+root@20574c87bb10:/opt# cd ..
+root@20574c87bb10:/# cd root
+root@20574c87bb10:~# ls
+root@20574c87bb10:~# cd ..
+root@20574c87bb10:/# cd lib
+root@20574c87bb10:/lib# ls
+apt  dpkg  init  locale  lsb  mime  os-release  sysctl.d  systemd  terminfo  tmpfiles.d  udev  x86_64-linux-gnu
